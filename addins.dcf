@@ -1,0 +1,4 @@
+Name: Apply Dan's Style
+Description: Apply Dan Manter's custom R code formatting style to the active document or selection.
+Binding: apply_dan_style
+Interactive: false

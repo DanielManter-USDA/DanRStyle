@@ -1,0 +1,29 @@
+Package: DanRStyle
+Type: Package
+Title: Custom R Code Styling Rules
+
+Version: 0.1.0
+Authors@R: 
+    person(
+      given = "Dan",
+      family = "Manter",
+      role = c("aut", "cre"),
+      email = "daniel.manter@usda.gov"
+    )
+Description: Provides a custom R code formatting style including soft alignment, 
+    tidyverse indentation, pipe-at-start formatting, operator spacing, aligned 
+    comments, wrapped comments, multi-line argument breaking, and git-aware 
+    styling. Includes an RStudio Addin for one-click application of the style.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Depends: 
+    R (>= 4.0)
+Imports:
+    styler,
+    utils
+Suggests:
+    testthat,
+    rstudioapi
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.1
