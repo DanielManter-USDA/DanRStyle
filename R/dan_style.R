@@ -20,23 +20,13 @@ dan_style <- function(scope = "tokens", strict = FALSE) {
     strict = strict
   )
   
-  # Replace / extend specific transformers
   style$token$transformers <- list(
-    # 1. Pipe-at-start rewriting
-    pipe_rewriter,
-    
-    # 2. Operator spacing
-    operator_spacing_transformer,
-    
-    # 3. Soft alignment of `=`
-    soft_align_equals,
-    
-    # 4. Comment alignment + wrapping
-    align_comments_transformer,
-    wrap_comments_transformer,
-    
-    # 5. Multi-line argument breaking
-    break_arguments_transformer
+    pipe_transformer       = pipe_rewriter,
+    operator_spacing       = operator_spacing_transformer,
+    soft_align             = soft_align_equals,
+    comment_alignment      = align_comments_transformer,
+    comment_wrapping       = wrap_comments_transformer,
+    argument_breaking      = break_arguments_transformer
   )
   
   # Git-aware styling (only changed lines)
